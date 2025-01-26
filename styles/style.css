@@ -76,7 +76,6 @@ ol {
   min-width: 711px;
   height: 386px;
   margin-bottom: 16px;
-  background: url("path_to_image");
 }
 
 .result__video {
@@ -88,7 +87,6 @@ ol {
 
 .search-form {
   width: 711px;
-  height: 54px;
   display: flex;
   align-items: center;
   gap: 40px;
@@ -108,15 +106,15 @@ ol {
   font-weight: 400;
   font-family: "Fira Sans Condensed", sans-serif;
   color: #fff;
-  margin-bottom: 5px;
+ 
 }
 
 .search-form__textfield {
   font-family: 'Fira Sans Condensed', sans-serif;
   border-top: 1px solid #FFF;
   border-right: none;
-  border-bottom: 1px solid #FFF;
-  border-left: none;
+  border-bottom: 1px solid currentColor;
+  border-left: none; 
   color: #FFF;
   padding: 2px 0px;
   font-weight: 400;
@@ -142,6 +140,9 @@ ol {
   margin: 1px 1px 1px 1px;
 }
 
+.search-form_label:focus {
+  outline: none;
+}
 
 .search-form__label:hover .search-form__label-text {
   text-decoration: 1px underline #FFF;
@@ -179,7 +180,6 @@ ol {
 
 .content__details {
   width: 399px;
-  height: 534px;
   grid-area: "content__detai";
   display: flex;
   align-items: flex-start;
@@ -230,7 +230,7 @@ ol {
 
 .title {
   width: 259px;
-  height: 210px;
+  height: auto;
   line-height: 0.94;
   font-weight: 700;
   font-family: "Oswald", sans-serif;
@@ -246,7 +246,7 @@ ol {
 .content__list-container {
   position: relative;
   max-width: 399px;
-  max-height: 298px;
+  height: 298px;
   overflow-y: auto;
 }
 
@@ -261,6 +261,10 @@ ol {
   text-decoration: none;
   color: #fff;
   font-size: 20px;
+}
+
+.content__card-link_current {
+  background-color: #545050;
 }
 
 .content__card-link:hover {
@@ -287,6 +291,10 @@ ol {
 }
 
 .content__video-card-title {
+  width: 196px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   line-height: 1;
   font-weight: 700;
   font-family: "Oswald", sans-serif;
@@ -296,28 +304,24 @@ ol {
 }
 
 .content__video-card-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
   font-weight: 400;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   color: #fff;
 }
+
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
-  background: url("path_to_image");
   object-fit: cover;
   object-position: bottom;
 }
 
 .content__video-card-description-container {
   flex-grow: inherit;
-}
-
-.more-button-template {
-  display: flex;
-}
-
-.button more-button {
-  display: flex;
-  flex-direction: row;
 }
